@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Название скрипта
+SCRIPT_NAME="main.py"
+
+# Поиск процесса по имени скрипта
+PID=$(ps aux | grep $SCRIPT_NAME | grep -v grep | awk '{print $2}')
+
+# Если процесс найден, завершить его
+if [ -n "$PID" ]; then
+    echo "Terminating process $PID..."
+    kill -9 $PID
+    echo "Process $PID terminated."
+else
+    echo "No process found for $SCRIPT_NAME."
+fi
+
+# Переход в директорию скрипта
+cd ~/apo
+
+# Запуск скрипта с использованием nohup
+nohup python3 $SCRIPT_NAME > output.log 2>&1 &
+
+# Вывод информации о запущенном процессе
+NEW_PID=$!
+echo "Started new process with PID $NEW_PID"

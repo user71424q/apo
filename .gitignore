@@ -1,0 +1,54 @@
+# Python кеши
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Системные файлы и IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Логи
+*.log
+
+# Конфигурационные файлы
+*.ini
+*.env
+
+# Файлы виртуального окружения
+venv/
+env/
+.venv/
+.env/
+.env
+
+# Бинарные и временные файлы
+*.bak
+*.swp
+*.tmp
+*.temp
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Папка dist для пакетов Python
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Test Coverage
+htmlcov/
+.tox/
+.pytest_cache/
+.cache/
+
+# MyPy типы
+.mypy_cache/
+.dmypy.json
+
+#пользовательские данные
+*.db
